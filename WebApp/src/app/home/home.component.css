@@ -1,0 +1,12 @@
+.media-text-center {
+  text-align: center;
+}
+
+.color-primary, .text-primary {
+  color: #FFF;
+}
+
+p {
+  font-size: large;
+  padding: 30px;
+}

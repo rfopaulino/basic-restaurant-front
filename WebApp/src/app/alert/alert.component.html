@@ -1,0 +1,16 @@
+<div *ngIf="openAlertSuccessIn$ | async" class="alert alert-success layout-config" role="alert">
+  Operação efetuada com sucesso!
+</div>
+<div *ngIf="openAlertDangerIn$ | async" class="alert alert-danger layout-config" role="alert">
+  Ocorreu um problema na execução da operação. Tente novamente por favor!
+</div>
+<div *ngIf="openAlertWarningIn$ | async" class="alert alert-warning layout-config" role="alert">
+  Favor verificar os dados!
+</div>
+
+<div *ngIf="openAlertDanger401In$ | async" class="alert alert-danger layout-config" role="alert">
+  Sua sessão terminou!
+</div>
+<div *ngIf="openAlertWarningGridIn$ | async" class="alert alert-warning layout-config" role="alert">
+  Favor selecionar algum registro!
+</div>

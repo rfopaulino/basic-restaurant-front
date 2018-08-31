@@ -1,0 +1,49 @@
+nav {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  background-color: #BC2026;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  background-color: #bf3b3f;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background-color: #bf3b3f;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #FFF;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+.navbar-default[_ngcontent-c0] .navbar-toggle[_ngcontent-c0]:focus, .navbar-default[_ngcontent-c0] .navbar-toggle[_ngcontent-c0]:hover {
+  background-color: #bf3b3f;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFF;
+  }
+}
+
+.padding-icon-menu {
+  padding-right: 10px;
+}

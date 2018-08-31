@@ -1,0 +1,17 @@
+@media (min-width: 1025px) {
+  .layout-config {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1024){
+  .layout-config {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}

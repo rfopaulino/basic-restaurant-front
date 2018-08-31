@@ -1,0 +1,44 @@
+<div class="base-body">
+
+  <h1 class="title-name">Cadastro de Pratos</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form #myForm="ngForm" (ngSubmit)="save(myForm)">
+        <div class="row">
+          <div class="col-md-8">
+            <label>Restaurante<span class="required"> *</span></label>
+            <select class="form-control" id="Restaurante" name="Restaurante" #Restaurante="ngModel" [(ngModel)]="model.IdRestaurante" required>
+              <option value=undefined>Selecione</option>
+              <option *ngFor="let rt of arrayRestaurantes" [ngValue]="rt.Id">{{rt.Nome}}</option>
+            </select>
+            <show-errors [control]="Restaurante"></show-errors>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <label>Nome Prato<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="NomePrato" name="NomePrato" #NomePrato="ngModel" [(ngModel)]="model.NomePrato" placeholder="Nome Prato" required maxlength="100" autofocus>
+            <show-errors [control]="NomePrato"></show-errors>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Preço<span class="required"> *</span></label>
+            <input type="number" class="form-control" id="Preco" name="Preco" #Preco="ngModel" [(ngModel)]="model.Preco" placeholder="0.00" required>
+            <show-errors [control]="Preco"></show-errors>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-lg btn-primary" (click)="cancel()"><span class="fa fa-ban padding-fa-button"></span>Cancelar</button>
+            <button type="submit" class="btn btn-lg btn-primary"><span class="fa fa-floppy-o padding-fa-button"></span>Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="base-body">
+
+  <h1 class="title-name">Edição de Restaurante</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form #myForm="ngForm" (ngSubmit)="save(myForm)">
+        <div class="row">
+          <div class="col-md-8">
+            <label>Nome<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="Nome" name="Nome" #Nome="ngModel" [(ngModel)]="model.Nome" placeholder="Nome" required maxlength="100" autofocus>
+            <show-errors [control]="Nome"></show-errors>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-lg btn-primary" (click)="cancel()"><span class="fa fa-ban padding-fa-button"></span>Cancelar</button>
+            <button type="submit" class="btn btn-lg btn-primary"><span class="fa fa-floppy-o padding-fa-button"></span>Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

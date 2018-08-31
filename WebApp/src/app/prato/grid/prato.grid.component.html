@@ -1,0 +1,41 @@
+<div class="base-body">
+
+  <h1 class="title-name">Pratos</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form #myForm="ngForm">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-lg btn-primary" (click)="new()"><span class="fa fa-plus padding-fa-button"></span>Cadastrar novo Prato</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="header-grid">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Selecione
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a (click)="excluir()" style="cursor: pointer;">Excluir</a></li>
+          </ul>
+        </div>
+      </div>
+      <ag-grid-angular #agGrid style="width: 100%; height: 400px;" class="ag-theme-balham"
+                       [gridOptions]="gridOptions"
+                       [columnDefs]="columnDefs"
+                       [rowData]="rowData"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [pagination]="true"
+                       [paginationPageSize]="10">
+      </ag-grid-angular>
+    </div>
+  </div>
+</div>

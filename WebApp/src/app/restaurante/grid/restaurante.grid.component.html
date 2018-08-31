@@ -1,0 +1,52 @@
+<div class="base-body">
+
+  <h1 class="title-name">Restaurantes</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form #myForm="ngForm" (ngSubmit)="search()">
+        <div class="row">
+          <div class="col-md-8">
+            <label>Nome</label>
+            <input type="text" class="form-control" id="Nome" name="Nome" #Nome="ngModel" [(ngModel)]="model.Nome" placeholder="Nome" maxlength="100" autofocus>
+            <show-errors [control]="Nome"></show-errors>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-lg btn-primary" [disabled]="!model.Nome"><span class="fa fa-search padding-fa-button"></span>Pesquisar</button>
+            <button type="button" class="btn btn-lg btn-primary" (click)="new()"><span class="fa fa-plus padding-fa-button"></span>Cadastrar novo Restaurante</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="header-grid">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Selecione
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a (click)="excluir()" style="cursor: pointer;">Excluir</a></li>
+          </ul>
+        </div>
+      </div>
+      <ag-grid-angular #agGrid style="width: 100%; height: 400px;" class="ag-theme-balham"
+                       [gridOptions]="gridOptions"
+                       [columnDefs]="columnDefs"
+                       [rowData]="rowData"
+                       [enableSorting]="true"
+                       [enableFilter]="true"
+                       [pagination]="true"
+                       [paginationPageSize]="10">
+      </ag-grid-angular>
+    </div>
+  </div>
+</div>
